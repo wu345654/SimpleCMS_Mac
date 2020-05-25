@@ -4,7 +4,7 @@ using NLog;
 
 namespace SimpleCMS.Models
 {
-    public class ApplicationDbContext:IdentityDbContext<ApplicationUser,ApplicationRole,int,ApplicationUserLogin,ApplicationUserRole,ApplicationUserClaim>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, int, ApplicationUserLogin, ApplicationUserRole, ApplicationUserClaim>
     {
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
