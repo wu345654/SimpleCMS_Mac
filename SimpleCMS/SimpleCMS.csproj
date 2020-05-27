@@ -147,6 +147,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\IndentityModels.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Content.cs" />
+    <Compile Include="Models\Media.cs" />
+    <Compile Include="Models\Tag.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Readme\Elmah.txt" />

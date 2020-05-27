@@ -38,4 +38,32 @@ namespace SimpleCMS.Models
         public DateTime? LastLogin { get; set; }
             
     }
+
+    public class ApplicationUserStore : UserStore<ApplicationUser, ApplicationRole, int, ApplicationUserLogin, ApplicationUserRole, ApplicationUserClaim>, IUserStore<ApplicationUser, int>, IDisposable
+    {
+        public ApplicationUserStore() : this(new ApplicationDbContext())
+        {
+            base.DisposeContext = true;
+        }
+
+        public ApplicationUserStore(ApplicationDbContext context) : base(context)
+        {
+            
+        }
+
+    }
+
+    public class ApplicationRoleStore : RoleStore<ApplicationRole, int, ApplicationUserRole>, IQueryableRoleStore<ApplicationRole, int>, IRoleStore<ApplicationRole, int>, IDisposable
+    {
+        public ApplicationRoleStore(): base(new ApplicationDbContext())
+        {
+            base.DisposeContext = true;
+        }
+
+        public ApplicationRoleStore(ApplicationDbContext context):base(new ApplicationDbContext())
+        {
+
+        }
+    }
+
 }
